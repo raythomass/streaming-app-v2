@@ -7,7 +7,7 @@ export default function Navbar() {
         <h2>StreamPlay+</h2>
         <div className='nav-list'>
             <Link className='nav-link' to={'/'}>
-                <h3>Trending</h3> 
+                <h3>Now Playing</h3> 
             </Link>
             <Link className='nav-link' to={'/movies'}>
                 <h3>Movies</h3> 

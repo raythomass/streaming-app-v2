@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Navbar from './components/Navbar'
-import Trending from './pages/Trending'
+import NowPlaying from './pages/NowPlaying'
 import Shows from './pages/Shows'
 import Movies from './pages/Movies'
 
@@ -15,7 +15,7 @@ function App() {
           <Routes>
             <Route
               path= '/'
-              element= {<Trending/>}
+              element= {<NowPlaying/>}
             />
             <Route
               path='/shows'
