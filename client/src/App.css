@@ -96,6 +96,14 @@
   border-radius: 10px;
 }
 
+.now-playing-movie {
+  color: #F2EEE3;
+}
+
+.now-playing-movie img {
+  width: 100%;
+}
+
 /* RESPONSIVE TABLETS */
 @media screen and (max-width: 800px) {
   .now-playing-hero-details {
