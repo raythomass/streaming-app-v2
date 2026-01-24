@@ -1,7 +1,10 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import NowPlayingList from '../components/NowPlayingList'
+import NowPlayingHero from '../components/NowPlayingHero';
 const apiKey = import.meta.env.VITE_API_KEY
-const bearerKey = import.meta.env.BEARER_KEY
+const bearerKey = import.meta.env.VITE_BEARER_KEY
 
 export default function NowPlaying() {
   // Create state for movies fetched from APi
@@ -9,7 +12,7 @@ export default function NowPlaying() {
   // Create thumbnails movies that will go in the grid below the hero
   const[theatreMovies, setTheatreMovies] = useState([])
   const heroMovie = theatreMovies[0]
-  const thumbnailMovies = theatreMovies.slice(1)
+  const listMovies = theatreMovies.slice(1)
 
   // API call to fetch the now playing movies
   //Bearer key is replaced by variable in .env file
@@ -25,13 +28,13 @@ export default function NowPlaying() {
 // Make fetch using the url and options created before
 // Turn response into JSON
 // console.log the JSON returned and set the state array to all the results of the call
-fetch(url, options)
-  .then(res => res.json())
-  .then(json => {
-    console.log(json);
-    setTheatreMovies(json.results);
-  })
-  .catch(err => console.error(err));
+    fetch(url, options)
+      .then(res => res.json())
+      .then(json => {
+        console.log(json.results)
+        setTheatreMovies(json.results)
+      })
+      .catch(err => console.error(err));
   }
 
   useEffect(() => {
@@ -44,21 +47,20 @@ fetch(url, options)
     }
   return (
     <>
-    <h1>Now Playing in Theatres</h1>
+    {/* <h1>Now Playing in Theatres</h1> */}
     <div className='now-playing-hero'>
-      <div className='now-playing-hero-details'>
-        <h2>{heroMovie.title}</h2>
-        <p>{heroMovie.overview}</p>
-        <div className='now-playing-hero-btns'>
-          <div className='now-playing-hero-watch'>
-            <h3>Watch Now</h3>
-          </div>
-          <div className='now-playing-hero-more'>
-            <h3>More Info</h3>
-          </div>
-      </div>
-      </div>
-      <img src={`https://image.tmdb.org/t/p/original${heroMovie.backdrop_path}`} alt="hero image movie poster" />
+      <NowPlayingHero key={heroMovie.id} hero={heroMovie}/>
+    </div>
+
+    <div className='now-playing-list'>
+      {listMovies.map((movie) => (
+          <Link 
+            to={`/movies/${movie.id}`}
+            className='now-playing-list-link'
+          >
+            <NowPlayingList movie={movie}/>
+          </Link>
+      ))}
     </div>
     </>
   );

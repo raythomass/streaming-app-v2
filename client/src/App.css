@@ -26,7 +26,6 @@
 /* NOW PLAYING STYLES */
 .now-playing-hero {
   position: relative;
-  /* border: 1px solid red; */
 }
 
 .now-playing-hero-details {
@@ -71,3 +70,58 @@
   border-radius: 10px;
 }
 
+.now-playing-list {
+  color: #F2EEE3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.now-playing-list-link {
+  width: 15%;
+}
+
+.now-playing-thumbnails{
+  position: relative;
+  width: 100%;
+}
+
+.now-playing-thumbnails-details {
+  position: absolute;
+}
+
+.now-playing-thumbnails img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* RESPONSIVE TABLETS */
+@media screen and (max-width: 800px) {
+  .now-playing-hero-details {
+    bottom: 0px;
+    width: 50%;
+    padding: 4vh;
+  }
+  .now-playing-hero h2 {
+    font-size: 32px ;
+    margin: 0px;
+  }
+  .now-playing-hero p {
+    font-size: 12px;
+    width: 70%;
+    margin-bottom: 3vh;
+  }
+  .now-playing-hero-btns {
+    gap: 2vh;
+  }
+  .now-playing-hero-watch {
+    font-size: 14px;
+  }
+  .now-playing-hero-more {
+    font-size: 14px;
+  }
+  .now-playing-list-link {
+    width: 20%;
+  }
+}
