@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 const apiKey = import.meta.env.VITE_API_KEY
-const bearerKey = import.meta.env.bearerKey
+const bearerKey = import.meta.env.BEARER_KEY
 
 export default function NowPlaying() {
   // Create state for movies fetched from APi
