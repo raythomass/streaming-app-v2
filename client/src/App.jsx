@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import NowPlaying from './pages/NowPlaying'
 import Shows from './pages/Shows'
 import Movies from './pages/Movies'
+import NowPlayingMovie from './pages/NowPlayingMovie'
 
 function App() {
 
@@ -24,6 +25,10 @@ function App() {
             <Route
               path='/movies'
               element={<Movies/>}
+            />
+            <Route
+              path='/movies/:id'
+              element={<NowPlayingMovie/>}
             />
           </Routes>
         </div>
