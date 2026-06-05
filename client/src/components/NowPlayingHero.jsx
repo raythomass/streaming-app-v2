@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function NowPlayingHero({hero}) {
   return (
@@ -11,7 +12,12 @@ export default function NowPlayingHero({hero}) {
             <h3>Watch Now</h3>
           </div>
           <div className='now-playing-hero-more'>
-            <h3>More Info</h3>
+            <Link
+            to={`/movies/${hero.id}`}
+            className='Link'
+            >
+              <h3>More Info</h3>
+            </Link>
           </div>
       </div>
       </div>
