@@ -12,7 +12,7 @@ export default function NowPlaying() {
   // Create thumbnails movies that will go in the grid below the hero
   const[theatreMovies, setTheatreMovies] = useState([])
   const heroMovie = theatreMovies[0]
-  const listMovies = theatreMovies.slice(1)
+  const listMovies = theatreMovies.slice(1, -1)
 
   // API call to fetch the now playing movies
   //Bearer key is replaced by variable in .env file

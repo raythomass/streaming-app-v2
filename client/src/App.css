@@ -1,4 +1,14 @@
 /* NAVBAR STYLES */
+:root {
+  --mainblue: #4F9CCF;
+  --offwhite: #F2EEE3;
+  --altgrey: #636363;
+}
+
+.Link {
+  text-decoration: none;
+}
+
 .navbar {
   display: flex;
   flex-direction: row;
@@ -8,7 +18,7 @@
 }
 
 .navbar h2 {
-  color: #4F9CCF;
+  color: var(--mainblue);
 }
 
 .nav-list {
@@ -20,7 +30,7 @@
 
 .nav-link {
   text-decoration: none;
-  color: #F2EEE3;
+  color: var(--offwhite);
 }
 
 /* NOW PLAYING STYLES */
@@ -58,11 +68,11 @@
 }
 
 .now-playing-hero-watch {
-  background-color: #4F9CCF;
+  background-color: var(--mainblue);
 }
 
 .now-playing-hero-more {
-  background-color: rgb(99, 99, 99);
+  background-color: var(--altgrey);
 }
 
 .now-playing-hero img {
@@ -71,7 +81,7 @@
 }
 
 .now-playing-list {
-  color: #F2EEE3;
+  color: var(--offwhite);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -85,6 +95,12 @@
 .now-playing-thumbnails{
   position: relative;
   width: 100%;
+  margin-top: 3vh;
+}
+
+.now-playing-thumbnails:hover {
+  scale: 1.1;
+  transition: ease-in-out 0.3s;
 }
 
 .now-playing-thumbnails-details {
@@ -97,12 +113,84 @@
 }
 
 .now-playing-movie {
-  color: #F2EEE3;
+  color: var(--offwhite);
+  /* border: 1px solid red; */
+}
+
+.now-playing-movie-gradient {
+  position: relative;
+  /* border: 1px solid blue; */
+  background: #000000;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.43) 24%, rgba(255, 255, 255, 0) 50%);
 }
 
 .now-playing-movie img {
   width: 100%;
+  position: relative;
+  z-index: -1;
 }
+
+.now-playing-movie-details {
+  position: absolute;
+  bottom: 10%;
+  width: 50%;
+  padding: 4vh;
+}
+
+.now-playing-movie-details small {
+  padding-right: 4vh;
+}
+
+.now-playing-movie-btns {
+  display: flex;
+  gap: 4vh;
+}
+
+.now-playing-movie-btns div {
+  border-radius: 10px;
+  padding-left: 5vh;
+  padding-right: 5vh;
+}
+
+.now-playing-movie-play {
+  background-color: var(--mainblue);
+  display: flex;
+  align-items: center;
+  gap: 1vh;
+}
+
+.now-playing-movie-trailer {
+  background-color: var(--altgrey);
+}
+
+.now-playing-movie-cast{
+  display: flex;
+  align-items: flex-start;
+  /* border: 1px solid red; */
+  width: 50%;
+  margin-bottom: 3vh;
+}
+
+.now-playing-movie-cast-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.now-playing-movie-cast h2 {
+  margin: 0vh;
+}
+
+.now-playing-movie-cast p {
+  margin: 0vh;
+  margin-bottom: 3vh;
+}
+
+.now-playing-movie-cast img {
+  width: 15vh;
+  margin-right: 3vh;
+}
+
+
 
 /* RESPONSIVE TABLETS */
 @media screen and (max-width: 800px) {
