@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPlay} from '@fortawesome/free-solid-svg-icons'
-import NowPlayingMovieCast from '../components/NowPlayingMovieCast';
+import MovieCast from '../components/MovieCast';
 const apiKey = import.meta.env.VITE_API_KEY
 const bearerKey = import.meta.env.VITE_BEARER_KEY
 
@@ -57,10 +57,12 @@ export default function NowPlayingMovie() {
       </div>
         <img src={`https://image.tmdb.org/t/p/original${singleMovie.backdrop_path}`} alt="hero image movie poster" />
       </div>
+      <div>
+        <h2 id='cast'>Cast:</h2>
+      </div>
       <div className='now-playing-movie-credits'>
-        <h2>Cast</h2>
         {singleMovie && singleMovie.credits.cast.map((cast) => (
-          <NowPlayingMovieCast cast={cast}/>
+          <MovieCast cast={cast}/>
         ))}
       </div>
     </div>

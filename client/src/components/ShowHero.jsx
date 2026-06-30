@@ -1,19 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function NowPlayingHero({hero}) {
+export default function ShowHero({hero}) {
   return (
     <>
-    <div className='now-playing-hero-details'>
-        <h2>{hero.title}</h2>
+    <div className='show-hero-details'>
+        <h2>{hero.name}</h2>
         <p>{hero.overview}</p>
-        <div className='now-playing-hero-btns'>
-          <div className='now-playing-hero-watch'>
+        <div className='show-hero-btns'>
+          <div className='show-hero-watch'>
             <h3>Watch Now</h3>
           </div>
-          <div className='now-playing-hero-more'>
+          <div className='show-hero-more'>
             <Link
-            to={`/movies/${hero.id}`}
+            to={`/shows/${hero.id}`}
             className='Link'
             >
               <h3>More Info</h3>

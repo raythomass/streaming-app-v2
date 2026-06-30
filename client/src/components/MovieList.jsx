@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function NowPlayingList({movie}) {
+export default function MovieList({movie}) {
   return (
     <div className='now-playing-thumbnails'>
       <div className='now-playing-thumbnails-details'>

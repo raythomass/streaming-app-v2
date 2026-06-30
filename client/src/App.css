@@ -38,7 +38,7 @@
   position: relative;
 }
 
-.now-playing-hero-details {
+.movie-hero-details {
   position: absolute;
   color: white;
   bottom: 10%;
@@ -46,32 +46,32 @@
   padding: 4vh;
 }
 
-.now-playing-hero h2 {
+.movie-hero h2 {
   font-size: 45px ;
   margin: 0px;
 }
 
-.now-playing-hero p {
+.movie-hero p {
   width: 70%;
   margin-bottom: 3vh;
 }
 
-.now-playing-hero-btns {
+.movie-hero-btns {
   display: flex;
   gap: 5vh;
 }
 
-.now-playing-hero-btns div {
+.movie-hero-btns div {
   border-radius: 10px;
   padding-left: 1vh ;
   padding-right: 1vh ;
 }
 
-.now-playing-hero-watch {
+.movie-hero-watch {
   background-color: var(--mainblue);
 }
 
-.now-playing-hero-more {
+.movie-hero-more {
   background-color: var(--altgrey);
 }
 
@@ -163,31 +163,89 @@
   background-color: var(--altgrey);
 }
 
-.now-playing-movie-cast{
+.now-playing-movie-credits {
+  /* border: 2px blue solid; */
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2vh;
+}
+
+#cast {
+  margin-top: 3vh;
+}
+
+.movie-cast{
   display: flex;
   align-items: flex-start;
   /* border: 1px solid red; */
-  width: 50%;
-  margin-bottom: 3vh;
+  width: 30%;
+  margin-bottom: 5vh;
 }
 
-.now-playing-movie-cast-details {
+.movie-cast-details {
   display: flex;
   flex-direction: column;
 }
 
-.now-playing-movie-cast h2 {
+.movie-cast h2 {
   margin: 0vh;
 }
 
-.now-playing-movie-cast p {
+.movie-cast p {
   margin: 0vh;
   margin-bottom: 3vh;
 }
 
-.now-playing-movie-cast img {
+.movie-cast img {
   width: 15vh;
   margin-right: 3vh;
+}
+
+
+
+/*         TV SHOW STYLES.          */
+.show-hero-details {
+  position: absolute;
+  color: white;
+  bottom: 10%;
+  width: 50%;
+  padding: 4vh;
+}
+
+.show-hero h2 {
+  font-size: 45px ;
+  margin: 0px;
+}
+
+.show-hero p {
+  width: 70%;
+  margin-bottom: 3vh;
+}
+
+.show-hero-btns {
+  display: flex;
+  gap: 5vh;
+}
+
+.show-hero-btns div {
+  border-radius: 10px;
+  padding-left: 1vh ;
+  padding-right: 1vh ;
+}
+
+.show-hero-watch {
+  background-color: var(--mainblue);
+}
+
+.show-hero-more {
+  background-color: var(--altgrey);
+}
+
+.show-hero img {
+  width: 100%;
+  position: relative;
+  z-index: -1;
 }
 
 
