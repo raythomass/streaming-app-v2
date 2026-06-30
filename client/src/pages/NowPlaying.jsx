@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import NowPlayingList from '../components/NowPlayingList'
-import NowPlayingHero from '../components/NowPlayingHero';
+import MovieList from '../components/MovieList'
+import MovieHero from '../components/MovieHero';
 const apiKey = import.meta.env.VITE_API_KEY
 const bearerKey = import.meta.env.VITE_BEARER_KEY
 
@@ -49,7 +49,7 @@ export default function NowPlaying() {
     <>
     {/* <h1>Now Playing in Theatres</h1> */}
     <div className='now-playing-hero'>
-      <NowPlayingHero key={heroMovie.id} hero={heroMovie}/>
+      <MovieHero key={heroMovie.id} hero={heroMovie}/>
     </div>
 
     <div className='now-playing-list'>
@@ -58,7 +58,7 @@ export default function NowPlaying() {
             to={`/movies/${movie.id}`}
             className='now-playing-list-link'
           >
-            <NowPlayingList movie={movie}/>
+            <MovieList movie={movie}/>
           </Link>
       ))}
     </div>

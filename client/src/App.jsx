@@ -5,6 +5,7 @@ import NowPlaying from './pages/NowPlaying'
 import Shows from './pages/Shows'
 import Movies from './pages/Movies'
 import NowPlayingMovie from './pages/NowPlayingMovie'
+import SingleShowPage from './pages/SingleShowPage'
 
 function App() {
 
@@ -21,6 +22,10 @@ function App() {
             <Route
               path='/shows'
               element={<Shows/>}
+            />
+            <Route
+              path='/shows/:id'
+              element={<SingleShowPage/>}
             />
             <Route
               path='/movies'
