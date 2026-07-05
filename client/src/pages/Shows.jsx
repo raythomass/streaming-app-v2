@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ShowHero from '../components/ShowHero';
+import ShowList from '../components/ShowList';
 const apiKey = import.meta.env.VITE_API_KEY
 const bearerKey = import.meta.env.VITE_BEARER_KEY
 
@@ -41,6 +42,16 @@ export default function Shows() {
     <>
     <div className='show-hero'>
       <ShowHero key={heroShow.id} hero={heroShow}/>
+    </div>
+    <div className='show-list'>
+      { listShows.map((show) => (
+        <Link
+        to={`/shows/${show.id}`}
+        className='show-list-link'
+        >
+          <ShowList show={show}/>
+        </Link>
+      ))}
     </div>
     </>
   );
