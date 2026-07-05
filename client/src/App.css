@@ -204,6 +204,12 @@
 
 
 
+
+
+
+
+
+
 /*         TV SHOW STYLES.          */
 .show-hero-details {
   position: absolute;
@@ -247,6 +253,86 @@
   position: relative;
   z-index: -1;
 }
+
+.show-list {
+  color: var(--offwhite);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.show-list-link {
+  width: 15%;
+}
+
+.show-list-thumbnails {
+  position: relative;
+  width: 100%;
+  margin-top: 3vh;
+}
+
+.show-list-thumbnails-details {
+  position: absolute;
+}
+
+.show-list-thumbnails img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.single-show {
+  color: var(--offwhite);
+  /* border: 1px solid red; */
+}
+
+.single-show-gradient {
+  position: relative;
+  /* border: 1px solid blue; */
+  background: #000000;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.43) 24%, rgba(255, 255, 255, 0) 50%);
+}
+
+.single-show-details {
+  position: absolute;
+  bottom: 10%;
+  width: 50%;
+  padding: 4vh;
+}
+
+.single-show-details small {
+  padding-right: 4vh;
+}
+
+.single-show-btns {
+  display: flex;
+  gap: 4vh;
+}
+
+.single-show-btns div {
+  border-radius: 10px;
+  padding-left: 5vh;
+  padding-right: 5vh;
+}
+
+.single-show-play {
+  background-color: var(--mainblue);
+  display: flex;
+  align-items: center;
+  gap: 1vh;
+}
+
+.single-show-trailer {
+  background-color: var(--altgrey);
+}
+
+.single-show-gradient img {
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+
 
 
 
