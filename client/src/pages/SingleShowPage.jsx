@@ -89,13 +89,14 @@ export default function SingleShowPage() {
           <img src={`https://image.tmdb.org/t/p/original${singleShow.backdrop_path}`} alt="hero image movie poster" />
       </div>
       <div className='season-selector'>
+        <h2>Seasons:</h2>
         <select
           id="season-selector"
           value={selectedSeason}
           onChange={handleSeasonChange}
         >
           {singleShow.seasons.map((season) => (
-            <option key={season.id} value={season.season_number}>
+            <option className='season-option' key={season.id} value={season.season_number}>
               {season.name}
             </option>
           ))}

@@ -332,6 +332,41 @@
   z-index: -1;
 }
 
+.season-selector {
+  margin-top: 3vh;
+}
+#season-selector {
+  color: var(--offwhite);
+  font-size: 14px;
+  font-family: "Outfit", sans-serif;
+  font-weight: bold;
+  padding: 1vh;
+  background-color: var(--altgrey);
+  border-radius: 1vh;
+}
+
+.show-episodes {
+  margin-top: 4vh;
+}
+
+.episode-cont {
+  border-bottom: 1px solid var(--altgrey);
+  display: flex;
+  gap: 3vh;
+  margin-bottom: 2vh;
+  padding: 2vh;
+}
+
+.episode-cont img {
+  /* border: 1px solid blue; */
+  width: 25%;
+}
+
+.episode-details {
+  display: flex;
+  flex-direction: column;
+}
+
 
 
 
