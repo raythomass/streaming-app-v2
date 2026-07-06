@@ -130,36 +130,94 @@
   z-index: -1;
 }
 
-.now-playing-movie-details {
-  position: absolute;
-  bottom: 10%;
+.np-highlight {
+  /* border: 1px solid red; */
+  display: flex;
+  gap: 8vh;
+}
+
+.np-highlight img {
+  width: 20%;
+}
+
+.np-overview {
+  display: flex;
+  flex-direction: column;
+  /* border: 3px solid var(--altgrey); */
+}
+
+.np-overview h1 {
+  /* border: 1px solid red; */
+  margin: 0vh 0vh 5vh 0vh;
+}
+
+.np-details {
+  display: flex;
+  /* border: 1px solid blue; */
+}
+
+.np-desc {
   width: 50%;
-  padding: 4vh;
+  /* border: 1px solid green; */
 }
 
-.now-playing-movie-details small {
-  padding-right: 4vh;
+.np-desc p {
+  margin: 0vh;
+  padding: 0vh 5vh 0vh 0vh;
 }
 
-.now-playing-movie-btns {
+.np-extras {
+  width: 50%;
+  /* border: 1px solid green; */
+}
+
+.np-extras p {
+  margin: 0vh 0vh 4vh 0vh;
+}
+
+#genre {
+  margin: 0vh 0vh 2vh 0vh;
+}
+
+.genres {
   display: flex;
-  gap: 4vh;
+  flex-wrap: wrap;
+  gap: 2vh;
 }
 
-.now-playing-movie-btns div {
-  border-radius: 10px;
-  padding-left: 5vh;
-  padding-right: 5vh;
+.genres small {
+  padding: 1vh 3vh 1vh 3vh;
+  background-color: #636363;
+  color: var(--offwhite);
+  border-radius: 5vh;
 }
 
-.now-playing-movie-play {
-  background-color: var(--mainblue);
+.np-btns {
   display: flex;
+  gap: 3vh;
+  /* border: 1px solid pink; */
+}
+
+.np-play {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
   align-items: center;
   gap: 1vh;
+  padding-left: 4vh;
+  padding-right: 4vh;
+  border-radius: 1vh;
+  background-color: var(--mainblue);
 }
 
-.now-playing-movie-trailer {
+.np-trailer {
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 4vh;
+  padding-right: 4vh;
+  border-radius: 1vh;
   background-color: var(--altgrey);
 }
 
@@ -168,6 +226,7 @@
   display: flex; 
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 4vh;
   margin-top: 2vh;
 }
 
@@ -177,9 +236,8 @@
 
 .movie-cast{
   display: flex;
-  align-items: flex-start;
   /* border: 1px solid red; */
-  width: 30%;
+  width: 20%;
   margin-bottom: 5vh;
 }
 
@@ -198,7 +256,7 @@
 }
 
 .movie-cast img {
-  width: 15vh;
+  width: 10vh;
   margin-right: 3vh;
 }
 
