@@ -37,25 +37,37 @@ export default function NowPlayingMovie() {
     }
   return (
     <div className='now-playing-movie'>
-      <div className='now-playing-movie-gradient'>
-        <div className='now-playing-movie-details'>
-        <div>
+      <div className='np-highlight'>
+        <img src={`https://image.tmdb.org/t/p/original${singleMovie.poster_path}`} alt="" />
+        <div className='np-overview'>
           <h1>{singleMovie.title}</h1>
-          <small>{singleMovie.runtime} minutes</small>
-          <small>{singleMovie.vote_average} / 10</small>
-          <p>{singleMovie.overview}</p>
-        </div>
-        <div className='now-playing-movie-btns'>
-          <div className='now-playing-movie-play'>
-            <FontAwesomeIcon icon={faPlay} />
-            <h3>Play</h3>
+          <div className='np-details'>
+            <div className='np-desc'>
+              <p>{singleMovie.overview}</p>
+            </div>
+            <div className='np-extras'>
+              <p>Runtime: {singleMovie.runtime} minutes</p>
+              <p>Rating: {singleMovie.vote_average} / 10</p>
+              <div className='np-genres'>
+                <p id='genre'>Genres:</p>
+                <div className='genres'>
+                  {singleMovie.genres.map((genre) => (
+                    <small>{genre.name}</small>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
-          <div className='now-playing-movie-trailer'>
-            <h3>Trailer</h3>
+          <div className='np-btns'>
+            <div className='np-play'>
+              <FontAwesomeIcon icon={faPlay} />
+              <h3>Play</h3>
+            </div>
+            <div className='np-trailer'>
+              <h3>Trailer</h3>
+            </div>
           </div>
         </div>
-      </div>
-        <img src={`https://image.tmdb.org/t/p/original${singleMovie.backdrop_path}`} alt="hero image movie poster" />
       </div>
       <div>
         <h2 id='cast'>Cast:</h2>
