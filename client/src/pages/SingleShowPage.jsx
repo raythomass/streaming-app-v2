@@ -52,8 +52,11 @@ export default function SingleShowPage() {
 
     useEffect(() => {
       fetchSingleShow()
+    }, [id]);
+
+    useEffect(() => {
       fetchSingleSeason()
-    }, [id, selectedSeason]);
+    }, [id, selectedSeason])
 
     const handleSeasonChange = (e) => {
       setSelectedSeason(Number(e.target.value));
@@ -62,6 +65,10 @@ export default function SingleShowPage() {
 
 
     if (!singleShow) {
+      return <div>Loading...</div>;
+    }
+
+    if (!singleSeason) {
       return <div>Loading...</div>;
     }
 
